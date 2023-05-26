@@ -199,7 +199,8 @@ if(cont1 && cont2){
     }else{
         Console.WriteLine("Los Numeros son Iguales");
     }
-    
+
 }else{
     Console.WriteLine("Algun dato Ingresado no es un numero, Ingrese nuevamente");
 }
+
