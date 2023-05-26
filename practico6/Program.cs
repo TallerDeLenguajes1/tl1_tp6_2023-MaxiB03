@@ -89,7 +89,7 @@ do
 */
 
 //EJERCICIO 3
-
+/*
 double op, num1, num2, resul,resul2, resp;
 
 do
@@ -203,4 +203,60 @@ if(cont1 && cont2){
 }else{
     Console.WriteLine("Algun dato Ingresado no es un numero, Ingrese nuevamente");
 }
+*/
+
+//EJERCICIO 4
+
+string cadena, cadena2, nuevaCad, subCad, resultado;
+int longitud, num1, num2, res;
+
+Console.WriteLine("Ingrese una Cadena de Texto: ");
+cadena=Console.ReadLine();
+
+Console.WriteLine("Ingrese otra Cadena de Texto: ");
+cadena2=Console.ReadLine();
+
+longitud=cadena.Length;
+Console.WriteLine("La longitud de la Cadena "+cadena+" es: "+longitud);
+
+nuevaCad=cadena+""+cadena2;
+Console.WriteLine("Cadena Concatenada entre "+cadena+" y "+cadena2+": "+nuevaCad);
+
+if(longitud>1)
+{
+    subCad=cadena.Substring(0,1);
+    Console.WriteLine("Subcadena de "+cadena+": "+subCad);
+}
+
+Console.WriteLine("Ingrese un numero: ");
+bool control1=int.TryParse(Console.ReadLine(), out num1);
+
+Console.WriteLine("Ingrese otro numero: ");
+bool control2=int.TryParse(Console.ReadLine(), out num2);
+
+if(control1 && control2){
+
+    res=num1+num2;
+    resultado=$"La suma entre {num1} y {num2} es: {res} ";
+    Console.WriteLine(resultado);
+
+}else{
+    Console.WriteLine("Algun dato Ingresado no es un numero, Ingrese nuevamente");
+}
+
+Console.WriteLine("---Recorro la Cadena "+nuevaCad+"---");
+
+foreach (char caracter in nuevaCad)
+{
+    Console.WriteLine(caracter);
+}
+
+Console.WriteLine("Ingrese una Cadena de Texto: ");
+cadena=Console.ReadLine();
+
+cadena=cadena.ToUpper();
+Console.WriteLine("Cadena en Mayusculas: "+cadena);
+
+cadena=cadena.ToLower();
+Console.WriteLine("Cadena en Minusculas: "+cadena);
 
